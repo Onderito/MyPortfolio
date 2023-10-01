@@ -1,0 +1,17 @@
+.border-gradient {
+  position: relative;
+  border: 2px solid transparent;
+  animation: gradientAnimation 2s linear infinite;
+}
+
+.custom-tailwind-class {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9];
+}
+
+.custom-gradient-class {
+  @apply bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9];
+}
+
+.custom-gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#CFCF27] from-40% to-[#CF7500];
+}
