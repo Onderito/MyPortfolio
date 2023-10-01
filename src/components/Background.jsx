@@ -15,7 +15,7 @@ function Background() {
             visible: { opacity: 1, x: 0 },
           }}
           ref={ref}
-          className="mt-20 px-9 py-5 w-[380px] mx-auto flex flex-col shadow-md bg-black shadow-blue-800 rounded-3xl lg:h-[550px] lg:w-[1000px] lg:flex-row-reverse lg:justify-center lg:items-center lg:mx-auto"
+          className="mt-20 px-9 py-5 w-[380px] mx-auto flex flex-col shadow-md bg-[#0f1129] shadow-blue-800 rounded-3xl lg:h-[550px] lg:w-[1000px] lg:flex-row-reverse lg:justify-center lg:items-center lg:mx-auto"
         >
           <img
             className="w-72 mx-auto"

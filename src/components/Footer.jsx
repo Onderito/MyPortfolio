@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer() {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 pt-5 w-full bg-[#0f1129,] shadow-inner shadow-indigo-950 py-32 rounded-tl-3xl rounded-tr-3xl">
+    <div className="flex flex-col justify-center items-center gap-5 pt-5 w-full bg-[#0f1129] shadow-inner shadow-indigo-950 py-32 rounded-tl-3xl rounded-tr-3xl">
       <h3 className="text-white custom-tailwind-class rounded-xl px-1 text-4xl font-black lg:text-4xl font-yatra">
         Contact me{" "}
       </h3>
