@@ -1,7 +1,6 @@
 import "./App.css";
 import banner from "./images/img.png";
 import Presentation from "../src/components/Presentation.jsx";
-import Project from "./components/Project.jsx";
 import SoftSkills from "./components/SoftSkills.jsx";
 import SocialMedia from "./components/SocialMedia";
 
@@ -10,6 +9,8 @@ import Title from "./components/Title";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Background from "./components/Background";
+
+import Project from "./components/Project";
 
 function App() {
   return (

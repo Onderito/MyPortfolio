@@ -15,7 +15,7 @@ function Background() {
             visible: { opacity: 1, x: 0 },
           }}
           ref={ref}
-          className="mt-20 px-9 py-5 w-[380px] mx-auto flex flex-col shadow-md bg-[#0f1129] shadow-blue-800 rounded-3xl lg:h-[550px] lg:w-[1000px] lg:flex-row-reverse lg:justify-center lg:items-center lg:mx-auto"
+          className="mt-20 px-9 py-5 w-[380px] mx-auto flex flex-col shadow-md bg-[#0f1129] shadow-blue-800 rounded-3xl md:h-[550px] md:w-[750px] lg:w-[1000px] md:flex-row-reverse md:justify-center md:items-center md:mx-auto"
         >
           <img
             className="w-72 mx-auto"
@@ -23,7 +23,7 @@ function Background() {
             alt="Photo de profil"
           />
           <section className="lg:flex lg:flex-col-reverse pl-1 gap-8">
-            <h1 className="text-4xl custom-tailwind-class font-black text-center  font-yatra mt-2 lg:order-1">
+            <h1 className="text-4xl custom-tailwind-class font-black text-center font-yatra mt-2 lg:order-1">
               Mon Parcours
             </h1>
             <div className="text-center pt-3 text-sm md:text-base font-bold text-white">
