@@ -4,13 +4,12 @@ import Presentation from "../src/components/Presentation.jsx";
 import SoftSkills from "./components/SoftSkills.jsx";
 import SocialMedia from "./components/SocialMedia";
 
-import Line from "./components/Line";
+import Line from "./utils/Line.jsx";
 import Title from "./components/Title";
 import Skills from "./components/Skills";
-import Footer from "./components/Footer";
 import Background from "./components/Background";
-
 import Project from "./components/Project";
+import FormContact from "./components/Form.jsx";
 
 function App() {
   return (
@@ -32,7 +31,8 @@ function App() {
       <Skills />
       <Title title="Soft Skills" />
       <SoftSkills />
-      <Footer />
+      <Title title="Contact me" />
+      <FormContact />
     </>
   );
 }

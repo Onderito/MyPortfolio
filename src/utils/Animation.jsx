@@ -4,14 +4,14 @@ export const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 1,
+      delayChildren: 0.5,
       staggerChildren: 0.5,
     },
   },
 };
 
 export const item = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { x: 0, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,

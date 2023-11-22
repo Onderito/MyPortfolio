@@ -14,12 +14,12 @@ function ProjectBlob({ title }) {
             <div className="relative flex justify-center items-center mt-20 mb-20">
               <motion.h2
                 className="text-4xl underline-offset-2 font-bold font-yatra custom-tailwind-class"
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: 50 }}
                 animate={{
                   opacity: inView ? 1 : 0,
-                  y: inView ? 0 : -20,
+                  y: inView ? 0 : 0,
                 }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.2 }}
               >
                 {title}
               </motion.h2>
