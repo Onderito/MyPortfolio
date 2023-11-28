@@ -6,7 +6,7 @@ import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { faPuzzlePiece } from "@fortawesome/free-solid-svg-icons";
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons";
 
-export const softSkillsData = [
+export const SoftSkillsData = [
   {
     name: "Effective Communication",
     icon: <FontAwesomeIcon icon={faComments} />,

@@ -1,27 +1,21 @@
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
-import { container, item } from "../utils/Animation";
+import { container, item } from "./Animation";
 
-function ProjectCard({ imageSrc, projectUrl }) {
+function ProjectCard({ imageSrc, projectUrl, name }) {
   return (
     <>
       <InView triggerOnce>
         {({ inView, ref }) => (
           <motion.div
-            className="flex justify-center items-center mt-10 lg:mt-0"
+            className="flex justify-center py-2 px-2 mx-11 shadow-sm shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0"
             variants={container}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             ref={ref}
           >
             {/* Première div */}
-            <motion.div
-              whileHover={{
-                scale: 1.05,
-              }}
-              className="flex justify-center"
-              variants={item}
-            >
+            <motion.div className="flex justify-center" variants={item}>
               <motion.figure
                 className="h-full rounded-2xl"
                 transition={{ duration: 0.5 }}
@@ -30,11 +24,14 @@ function ProjectCard({ imageSrc, projectUrl }) {
                 <img
                   src={imageSrc}
                   alt="projet numéro 1, page de connexion"
-                  className="w-[300px] h-[230px] lg:w-[350px] lg:h-[200px] object-cover rounded-xl"
+                  className=" max-w-xs h-44 object-cover rounded-xl"
                 />
+                <p className="text-center mt-4 font-semibold font-yatra text-white text-sm">
+                  {name}
+                </p>
                 <div className="flex justify-center">
                   <a
-                    className="font-bold pt-3 mt-5 mb-5 w-26 h-12 font-yatra text-1xl shadow-blue-900 shadow-md text-center rounded-2xl w-[250px] border-none hover:bg-indigo-900 hover:shadow-xl text-white hover:bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9]"
+                    className="font-bold py-3 mt-6 w-full font-yatra text-1xl  shadow-md text-center rounded-xl border-none text-white bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9]"
                     href={projectUrl}
                     target="_blank"
                     rel="noreferrer"

@@ -1,15 +1,14 @@
 import "./App.css";
 import banner from "./images/img.png";
-import Presentation from "../src/components/Presentation.jsx";
+import Presentation from "./components/HeroSection.jsx";
 import SoftSkills from "./components/SoftSkills.jsx";
-import SocialMedia from "./components/SocialMedia";
-
+import SocialMedia from "./utils/SocialMedia.jsx";
 import Line from "./utils/Line.jsx";
-import Title from "./components/Title";
-import Skills from "./components/Skills";
+import Title from "./utils/Title.jsx";
 import Background from "./components/Background";
 import Project from "./components/Project";
 import FormContact from "./components/Form.jsx";
+import Skills from "./components/Skills.jsx";
 
 function App() {
   return (

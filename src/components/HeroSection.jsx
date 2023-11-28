@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Typewriter, Cursor } from "react-simple-typewriter";
+// import { Typewriter, Cursor } from "react-simple-typewriter";
 import "./style.css";
 
 function Presentation() {
@@ -9,7 +9,7 @@ function Presentation() {
       <div className="top-10 lg:left-20 mt-10 ">
         <motion.div
           variants={{
-            hidden: { opacity: 0, y: 75 },
+            hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
           initial="hidden"
@@ -20,14 +20,16 @@ function Presentation() {
             Hi, I'm{" "}
             <span className="custom-tailwind-class font-yatra">Ulas.</span>
           </h2>
-          <p className="text-white text-2xl lg:text-4xl font-bold mt-1.5 tracking-wide">
-            I'm{" "}
-            <span className="font-black custom-tailwind-class font-yatra ">
-              <Typewriter
+          <p className="text-white text-2xl lg:text-2xl font-bold mt-1.5 tracking-wide">
+            I'm a{" "}
+            <span className="custom-gradient-text text-3xl">Javascript </span>
+            <span className="font-black font-yatra ">
+              Developer
+              {/* <Typewriter
                 words={["Developer", "Designer"]}
                 loop={true}
                 cursor={<Cursor />}
-              />
+              /> */}
             </span>
           </p>
         </motion.div>
