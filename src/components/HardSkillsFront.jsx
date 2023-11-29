@@ -9,7 +9,7 @@ import tailwind from "../images/tailwind.png";
 
 function HardSkillsFront() {
   return (
-    <div className="flex flex-wrap py-10 shadow-md shadow-indigo-800 px-1 relative gap-3 pl-2 border-gradient justify-center items-center">
+    <div className="flex flex-wrap py-10 px-1 shadow-md shadow-indigo-800 gap-3 pl-2 border-gradient justify-center items-center">
       <img
         className="w-[50px] transition-transform transform-gpu hover:scale-125"
         src={html}

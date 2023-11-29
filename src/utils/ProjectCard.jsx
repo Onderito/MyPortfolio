@@ -8,7 +8,7 @@ function ProjectCard({ imageSrc, projectUrl, name }) {
       <InView triggerOnce>
         {({ inView, ref }) => (
           <motion.div
-            className="flex justify-center py-2 px-2 mx-11 shadow-sm shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0"
+            className="flex justify-center py-2 px-2 mx-11 shadow-sm shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0 "
             variants={container}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -31,7 +31,7 @@ function ProjectCard({ imageSrc, projectUrl, name }) {
                 </p>
                 <div className="flex justify-center">
                   <a
-                    className="font-bold py-3 mt-6 w-full font-yatra text-1xl  shadow-md text-center rounded-xl border-none text-white bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9]"
+                    className="font-bold py-3 mt-6 w-full font-yatra text-1xl  shadow-md text-center rounded-xl border-none text-white bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9] transition-transform transform hover:scale-95 duration-200"
                     href={projectUrl}
                     target="_blank"
                     rel="noreferrer"

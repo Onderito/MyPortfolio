@@ -22,8 +22,9 @@ function Presentation() {
           </h2>
           <p className="text-white lg:ml-0.5 text-2xl lg:text-2xl font-bold mt-1.5 tracking-wide">
             I'm a{" "}
-            <span className="custom-gradient-text text-3xl">Javascript </span>
-            <span className="font-black font-yatra ">
+            <span className="custom-gradient-text text-2xl">Javascript </span>
+            <span className="font-black font-yatra">
+              {" "}
               Developer
               {/* <Typewriter
                 words={["Developer", "Designer"]}
