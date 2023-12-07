@@ -9,6 +9,7 @@ import Background from "./components/Background";
 import Project from "./components/Project";
 import FormContact from "./components/Form.jsx";
 import Skills from "./components/Skills.jsx";
+import HardSkills from "./components/HardSkills.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Title title="Projects" />
       <Project />
       <Title title="Hard Skills" />
+      <HardSkills />
       <Skills />
       <Title title="Soft Skills" />
       <SoftSkills />

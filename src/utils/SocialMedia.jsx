@@ -4,7 +4,7 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 function SocialMedia() {
   return (
-    <div className="flex justify-end w-full absolute top-0 pt-20 lg:px-20">
+    <div className="flex justify-end w-full absolute top-0 right-4 pt-20 lg:px-20">
       <div className="flex absolute gap-8 ">
         <FontAwesomeIcon
           onClick={() => {

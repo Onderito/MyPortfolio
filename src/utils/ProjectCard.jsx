@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 import { container, item } from "./Animation";
+import "../App.css";
 
 function ProjectCard({ imageSrc, projectUrl, name }) {
   return (
@@ -8,7 +9,7 @@ function ProjectCard({ imageSrc, projectUrl, name }) {
       <InView triggerOnce>
         {({ inView, ref }) => (
           <motion.div
-            className="flex justify-center mx-auto xl:mx-0  py-2 px-2 max-w-xs shadow-sm shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0 "
+            className="flex justify-center mx-auto xl:mx-0 2xl:mx-0 py-2 px-2 max-w-xs shadow-sm shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0 "
             variants={container}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -31,7 +32,7 @@ function ProjectCard({ imageSrc, projectUrl, name }) {
                 </p>
                 <div className="flex justify-center">
                   <a
-                    className="font-bold py-3 mt-6 w-full font-yatra text-1xl  shadow-md text-center rounded-xl border-none text-white bg-gradient-to-r from-[#4776E6] from-40% to-[#8E54E9] transition-transform transform hover:scale-95 duration-200"
+                    className="font-bold py-3 mt-5 w-full font-yatra text-md btn-grad"
                     href={projectUrl}
                     target="_blank"
                     rel="noreferrer"

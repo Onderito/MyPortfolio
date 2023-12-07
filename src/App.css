@@ -16,3 +16,16 @@ body {
     #160e3e
   );
 }
+
+.btn-grad {
+  background-image: linear-gradient(to right, #4776e6, #8e54e9);
+  text-align: center;
+  transition: 2s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+}
