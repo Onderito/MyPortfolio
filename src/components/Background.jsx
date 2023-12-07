@@ -36,14 +36,15 @@ function Background() {
                 My Background
               </h1>
               <div className="text-center pt-3 text-sm md:text-base font-bold text-white">
-                <p>
+                <p className="pt-2">
                   Je suis un{" "}
                   <span className="bg-indigo-500 rounded-xl px-1 font-black font-yatra ">
                     développeur
                   </span>{" "}
                   tout juste sorti de ma formation, prêt à relever de nouveaux
                   défis.
-                  <br />
+                </p>
+                <p className="pt-2">
                   J'ai une passion pour le développement web, ainsi qu'un
                   intérêt marqué pour l'
                   <span className="text-orange-400 font-bold font-yatra">

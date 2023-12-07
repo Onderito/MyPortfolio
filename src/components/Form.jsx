@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,28 +9,32 @@ function FormContact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [messageSend, setMessageSend] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .sendForm(
+    try {
+      const result = await emailjs.sendForm(
         "service_eyfs3jh",
         "template_1gvxla6",
         form.current,
         "EdUqTpGbebxRIDJpr"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setMessageSend("Votre message a bien été envoyé !");
-          resetForm();
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
+      setMessageSend(true);
+      resetForm();
+    } catch (error) {
+      console.error(error.text);
+      setMessageError(true);
+    }
+    setLoading(false);
+    setTimeout(() => {
+      setMessageSend(false);
+      setMessageError(false);
+    }, 3000);
   };
 
   const resetForm = () => {
@@ -45,19 +48,28 @@ function FormContact() {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="flex flex-col gap-4 max-w-xs mx-auto w-full"
+      className="flex relative flex-col gap-4 max-w-xs mx-auto w-full pt-16"
     >
-      {messageSend && (
-        <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-          className="bg-[#0f1129] shadow-green-800 shadow-md w-full  p-3 text-center rounded-lg font-yatra text-white"
-        >
-          {messageSend}
-        </motion.p>
-      )}
+      <div className="absolute top-0 left-0 w-full">
+        {messageSend && (
+          <div
+            className={`${
+              messageSend ? "opacity-1" : "opacity-0"
+            } bg-[#0f1129] shadow-green-800 shadow-md w-full p-3 text-center rounded-lg font-yatra text-white transition-opacity duration-500`}
+          >
+            {"Votre message a été envoyé"}
+          </div>
+        )}
+        {messageError && (
+          <div
+            className={`${
+              messageError ? "opacity-1" : "opacity-0"
+            } bg-[#0f1129] shadow-red-800 shadow-md w-full p-3 text-center rounded-lg font-yatra text-white transition-opacity duration-500`}
+          >
+            {"Votre message n'a pas été envoyé"}
+          </div>
+        )}
+      </div>
       <input
         type="text"
         value={name}
@@ -81,10 +93,12 @@ function FormContact() {
         name="message"
         onChange={(e) => setMessage(e.target.value)}
         value={message}
+        required
       ></textarea>
 
       <button
         type="submit"
+        disabled={!email || !message || loading}
         value="Send"
         className="flex items-center justify-center h-10 gap-2 p-3 rounded-lg font-yatra btn-active mb-10 w-full bg-gradient custom-gradient-class text-white transition-transform transform hover:scale-95 duration-200"
       >

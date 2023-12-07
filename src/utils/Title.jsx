@@ -1,7 +1,7 @@
 import { InView } from "react-intersection-observer";
 import { delay, motion } from "framer-motion";
 
-function ProjectBlob({ title }) {
+export default ({ title, className }) => {
   return (
     <>
       <InView triggerOnce threshold={1}>
@@ -11,7 +11,9 @@ function ProjectBlob({ title }) {
             animate={inView ? "visible" : "hidden"}
             ref={ref}
           >
-            <div className="relative flex justify-center items-center mt-20 mb-20">
+            <div
+              className={`relative flex justify-center items-center mt-20 mb-20 ${className}`}
+            >
               <motion.h2
                 className="text-4xl underline-offset-2 font-bold font-yatra custom-tailwind-class"
                 initial={{ opacity: 0, y: 50 }}
@@ -30,6 +32,4 @@ function ProjectBlob({ title }) {
       </InView>
     </>
   );
-}
-
-export default ProjectBlob;
+};

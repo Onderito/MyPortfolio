@@ -3,7 +3,7 @@ import banner from "./images/img.png";
 import Presentation from "./components/HeroSection.jsx";
 import SoftSkills from "./components/SoftSkills.jsx";
 import SocialMedia from "./utils/SocialMedia.jsx";
-import Line from "./utils/Line.jsx";
+
 import Title from "./utils/Title.jsx";
 import Background from "./components/Background";
 import Project from "./components/Project";
@@ -13,7 +13,6 @@ import Skills from "./components/Skills.jsx";
 function App() {
   return (
     <>
-      <Line />
       <div>
         <img
           className="static h-[80vh] w-full lg:object-fill object-cover"
@@ -30,7 +29,7 @@ function App() {
       <Skills />
       <Title title="Soft Skills" />
       <SoftSkills />
-      <Title title="Contact me" />
+      <Title title="Contact me" className={"mb-5"} />
       <FormContact />
     </>
   );
