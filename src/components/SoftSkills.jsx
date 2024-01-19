@@ -14,7 +14,7 @@ function SoftSkills() {
     <>
       <InView triggerOnce>
         {({ inView, ref }) => (
-          <section className="md:grid md:grid-cols-3 md:mx-20 2xl:mx-96  place-items-center">
+          <section className="md:grid md:grid-cols-3 md:mx-20 2xl:mx-96 pt-10 place-items-center">
             {isDesktop ? (
               SoftSkillsData.map((softSkill, index) => (
                 <motion.div

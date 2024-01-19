@@ -1,5 +1,5 @@
 import { InView } from "react-intersection-observer";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default ({ title, className }) => {
   return (
@@ -15,7 +15,7 @@ export default ({ title, className }) => {
               className={`relative flex justify-center items-center mt-20 mb-20 ${className}`}
             >
               <motion.h2
-                className="text-4xl underline-offset-2 font-bold font-yatra custom-tailwind-class"
+                className="text-4xl lg:text-5xl underline-offset-2 font-bold font-yatra custom-tailwind-class"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{
                   opacity: inView ? 1 : 0,

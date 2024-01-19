@@ -1,21 +1,20 @@
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
-import { container, item } from "./Animation";
+import { container, item } from "../utils/Animation";
 import "../App.css";
 
-function ProjectCard({ imageSrc, projectUrl, name }) {
+function CardProjects({ imageSrc, projectUrl, name }) {
   return (
     <>
       <InView triggerOnce>
         {({ inView, ref }) => (
           <motion.div
-            className="flex justify-center mx-auto xl:mx-0 2xl:mx-0 py-2 px-2 max-w-xs shadow-sm shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0 "
+            className="flex justify-center mx-auto xl:mx-0 2xl:mx-0 py-2 px-2 max-w-xs  shadow-indigo-800 rounded-lg items-center mt-10 lg:mt-0 "
             variants={container}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             ref={ref}
           >
-            {/* Première div */}
             <motion.div className="flex justify-center " variants={item}>
               <motion.figure
                 className="h-full rounded-2xl"
@@ -49,4 +48,4 @@ function ProjectCard({ imageSrc, projectUrl, name }) {
   );
 }
 
-export default ProjectCard;
+export default CardProjects;

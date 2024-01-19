@@ -7,13 +7,13 @@ function Background() {
   return (
     <InView triggerOnce>
       {({ inView, ref }) => (
-        <div className="w-full flex px-2">
+        <div className="w-full flex p-2 ">
           <motion.div
             initial={inView ? "hidden" : "visible"} // Animation initiale lorsqu'il est visible ou non
             animate={inView ? "visible" : "hidden"}
-            transition={{ duration: 2, delay: 0.25 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
             variants={{
-              hidden: { opacity: 0, x: -50 },
+              hidden: { opacity: 0, x: -500 },
               visible: { opacity: 1, x: 0 },
             }}
             ref={ref}
