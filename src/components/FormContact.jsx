@@ -56,7 +56,7 @@ function FormContact() {
             <div
               className={`${
                 messageSend ? "opacity-1" : "opacity-0"
-              } bg-[#0f1129] shadow-green-800 shadow-md w-full p-3 text-center rounded-lg font-yatra text-white transition-opacity duration-500`}
+              } bg-[#0f1129] shadow-green-800 shadow-md w-80 mx-auto p-3 text-center rounded-lg font-yatra  text-white transition-opacity duration-500`}
             >
               {"Votre message a été envoyé"}
             </div>
@@ -65,7 +65,7 @@ function FormContact() {
             <div
               className={`${
                 messageError ? "opacity-1" : "opacity-0"
-              } bg-[#0f1129] shadow-red-800 shadow-md w-full p-3 text-center rounded-lg font-yatra text-white transition-opacity duration-500`}
+              } bg-[#0f1129] shadow-red-800 shadow-md w-80 mx-auto p-3 text-center rounded-lg font-yatra text-white transition-opacity duration-500`}
             >
               {"Votre message n'a pas été envoyé"}
             </div>
