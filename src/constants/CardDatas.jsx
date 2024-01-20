@@ -11,11 +11,13 @@ function CardDatas() {
         name={"ToDoList"}
         projectUrl="https://to-do-list-sable-delta.vercel.app"
       />
+
       <CardProjects
         imageSrc={weather}
         name={"Weather App"}
         projectUrl="https://weather-app-5ocl.vercel.app"
       />
+
       <CardProjects
         imageSrc={nike}
         name={"Nike Store"}
